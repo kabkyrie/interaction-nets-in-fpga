@@ -138,12 +138,19 @@ test-suite test-library
   ghc-options: -threaded
   main-is: unittests.hs
   other-modules:
-    Tests.Core.Node
     NodeGenerate
+    Tests.Core.Node
+    Tests.Core.Unit.CPU
+    Tests.Core.Unit.Loader
+    Tests.Core.Unit.MemoryManager.MemoryManager
+    Tests.Core.Unit.Reducer
+    Tests.Isomorphism.Check
+    Tests.Isomorphism.NetSnapshot
   build-depends:
     lamagraph-core,
     QuickCheck,
     clash-prelude-hedgehog,
+    containers,
     hedgehog,
     tasty >= 1.2 && < 1.6,
     tasty-hedgehog,
